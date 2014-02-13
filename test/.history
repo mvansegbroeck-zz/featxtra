@@ -1,0 +1,500 @@
+#+1391722881
+vi ../../feat/feature-gtf.h
+#+1391722890
+bash run_decode.sh
+#+1391722904
+vi ../../feat/feature-gtf.h
+#+1391722916
+bash run_decode.sh
+#+1391722921
+vi ../../feat/feature-gtf.h
+#+1391722941
+vi ../../feat/feature-gtf.cc
+#+1391722999
+bash run_decode.sh
+#+1391723010
+vi ../../feat/feature-gtf.cc
+#+1391723060
+bash run_decode.sh
+#+1391723066
+vi ../../feat/feature-gtf.cc
+#+1391723078
+bash run_decode.sh
+#+1391723087
+vi ../../feat/feature-gtf.cc
+#+1391723255
+bash run_decode.sh
+#+1391723260
+vi ../../feat/feature-gtf.cc
+#+1391723287
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391723312
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391723359
+vi ../../feat/feature-gtf.cc
+#+1391723380
+bash run_decode.sh
+#+1391723390
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391723515
+vi ../../feat/feature-gtf.cc
+#+1391723640
+bash run_decode.sh
+#+1391723648
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391723657
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391723674
+vi ../../feat/feature-gtf.cc
+#+1391723687
+bash run_decode.sh
+#+1391723693
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391723748
+vi ../../feat/feature-gtf.cc
+#+1391743539
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391743556
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391744366
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391744470
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391744706
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391756621
+cd
+#+1391756624
+chelp
+#+1391756639
+cat admin/groupadm.bash
+#+1391756646
+cat admin/commands.txt
+#+1391756669
+man passwd
+#+1391756681
+sudo passwd -u jimmy
+#+1391756698
+sudo passwd -l jimmy
+#+1391756700
+sudo passwd -u jimmy
+#+1391758702
+exit
+#+1391812925
+vi ../../feat/feature-gtf.h
+#+1391813009
+vi ../../feat/feature-gtf.cc
+#+1391813136
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391813208
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391813652
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391814101
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391814205
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391814490
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391814496
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391814831
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391816692
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391816777
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391817065
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391820728
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391821252
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391821595
+bash run_test.bash
+#+1391821604
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391821755
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391822706
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391822743
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391822748
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391822847
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391823149
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391823215
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391823611
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391824291
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391824446
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391824531
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391824811
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391824984
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391824987
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826073
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826121
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826215
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826322
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826825
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826900
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391826935
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391827033
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391827244
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391827640
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391828381
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391828552
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391828575
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391828600
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391828790
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391828829
+bash run_test.bash
+#+1391828848
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829229
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829375
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829468
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829531
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829624
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829686
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391829710
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391884980
+top
+#+1391894720
+cd ~/work/ASR/kaldi-trunk-mdt/src/featbin/gdb/
+#+1391894726
+bash run_test.bash
+#+1391894750
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391894789
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391894862
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391894942
+cd /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/gdb
+#+1391894962
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391894992
+bash run_test.bash
+#+1391894995
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391895289
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391895559
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391895635
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391895802
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391896057
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391896081
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391896287
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391896303
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391896350
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391896501
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:/sailusb0/maarten/KALDI/kaldi-trunk-mdt/egs/wsj/s3//exp/aur4/train_clean/prospect4/feat/wav1.scp ark,scp:/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.ark,/sailusb0/maarten/KALDI/aur4/mdt/PROSPECT4/raw_prospect_test_train_wv1_prospect4.1.scp
+#+1391900232
+cd ~/work/ASR/kaldi-trunk-mdt/src/featbin/
+#+1391900233
+ls
+#+1391900313
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=gdb/prospect4.conf scp:gdb/wav.scp ark,scp:gdb/feat_out.ark,gdb/feat_out.scp
+#+1391900350
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:wav.scp ark,scp:feat_out.ark,feat_out.scp
+#+1391900383
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:wav.scp ark,scp:feat_out.ark,feat_out.scp
+#+1391900532
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/prospect4.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902019
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902080
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902142
+cd gdb
+#+1391902145
+bash run_decode.sh
+#+1391902154
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902377
+bash run_decode.sh
+#+1391902383
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902388
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902418
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902498
+bash run_decode.sh
+#+1391902506
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391902773
+bash run_decode.sh
+#+1391902873
+bash run_decode.sh
+#+1391902942
+bash run_decode.sh
+#+1391902950
+bash run_decode.sh
+#+1391902961
+bash run_decode.sh
+#+1391903428
+bash run_decode.sh
+#+1391903506
+bash run_decode.sh
+#+1391903663
+cd ~/work/ASR/kaldi-trunk-mdt/src/featbin/
+#+1391903684
+bash run_decode.sh
+#+1391903687
+cd gdb/
+#+1391903687
+bash run_decode.sh
+#+1391903695
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391903725
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391903762
+bash run_decode.sh
+#+1391903768
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391905321
+bash run_decode.sh
+#+1391905390
+bash run_decode.sh
+#+1391905399
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391905416
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391905461
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391905475
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391905516
+bash run_decode.sh
+#+1391905522
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391925740
+ls out/
+#+1391925751
+m0
+#+1391925988
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391926182
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391926419
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391926843
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927193
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927228
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927489
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927496
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927550
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927904
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391927992
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391928206
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391928244
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391928701
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391928788
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1391928872
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392027848
+gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392027848
+e=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392056484
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392056497
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-cmvn --norm-vars=true --utt2spk=ark:in/utt2spk ark:- scp:out/feat_out.scp ark,scp:.ark,.scp
+#+1392080339
+bash run_test.bash
+#+1392080342
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080372
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080375
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080381
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080424
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080531
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080539
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080667
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080682
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392080785
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392137779
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392137969
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392138120
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392138533
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out.scp ark:out/feat_out_mvn_arma.ark
+#+1392138726
+bash run_test.bash
+#+1392138738
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 scp:out/feat_out_mvn.scp ark:out/feat_out_mvn_arma.ark
+#+1392138788
+r
+#+1392138794
+r
+#+1392138796
+bash run_test.bash
+#+1392138820
+bash run_test.bash
+#+1392138831
+exec /home/maarten/work/ASR/kaldi-trunk-mdt/src/featbin/apply-arma --ar_order=2 ark:out/feat_out_mvn.ark ark:out/feat_out_mvn_arma.ark
+#+1392249637
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392249802
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392249862
+cd ../../..
+#+1392249867
+cd ../kaldi-trunk/src/featbin/
+#+1392249868
+ls
+#+1392249870
+cd gdb/
+#+1392249871
+ls
+#+1392249873
+bash run_test.bash
+#+1392249882
+bash run_decode.sh
+#+1392249893
+bash run_test.bash
+#+1392249909
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392250175
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392250258
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392250539
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392251434
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392252098
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392252130
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392252318
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392253017
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392253065
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392254441
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392254534
+bash run_test.bash
+#+1392254618
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392255151
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392255189
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392255225
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392256960
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392257497
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392257513
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392257536
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392258320
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392258471
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392258683
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392258977
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392259194
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392259311
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392259371
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392259526
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392259784
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392259823
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392260062
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392260336
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392262565
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392262606
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392262637
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392262865
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:out/pitch.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392265739
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:out/pitch.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392265766
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:out/pitch.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392265996
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:out/pitch.scp ark,scp:out/feat_out.ark,out/feat_out.scp
+#+1392266022
+exec /home/maarten/work/ASR/kaldi-trunk/src/featbin/compute-vad-feats --verbose=2 --config=conf/gtf.conf scp:in/wav.scp scp:out/pitch.scp ark,scp:out/feat_out.ark,out/feat_out.scp

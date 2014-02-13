@@ -9,3 +9,4 @@ List of functions
 
 * Gammatone Features Representation  
 * Gammatone Frequency Cepstral Coefficients 
+* more to follow
