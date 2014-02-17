@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     const char *usage =
-        "Create MFCC feature files.\n"
+        "Create GT feature files.\n"
         "Usage:  compute-gtf-feats [options...] <wav-rspecifier> <feats-wspecifier>\n";
 
     // construct all the global objects
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
     // Define defaults for gobal options
     std::string output_format = "kaldi";
 
-    // Register the MFCC option struct
+    // Register the GTF option struct
     gtf_opts.Register(&po);
 
     // Register the options
@@ -163,7 +163,7 @@ int main(int argc, char *argv[]) {
           features.NumRows(),
           100000,  // 10ms shift
           sizeof(float)*features.NumCols(),
-          006 | // MFCC
+          006 | // GTF
           (gtf_opts.use_energy ? 0100 : 020000) // energy; otherwise c0
         };
         p.second = header;

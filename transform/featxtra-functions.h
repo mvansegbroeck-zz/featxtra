@@ -17,18 +17,34 @@
 // limitations under the License.
 
 
-#ifndef KALDI_TRANSFORM_ARMA_H_
-#define KALDI_TRANSFORM_ARMA_H_
+#ifndef KALDI_TRANSFORM_FEATXTRA_FUNCTIONS_H_
+#define KALDI_TRANSFORM_FEATXTRA_FUNCTIONS_H_
 
 #include "base/kaldi-common.h"
 #include "matrix/matrix-lib.h"
 
 namespace kaldi {
 
-/// Apply ARMA (AutoRegressive-moving-average) normalization to a matrix of features.
+/// Apply FEATXTRA_FUNCTIONS (AutoRegressive-moving-average) normalization to a matrix of features.
 void ApplyArma(int ar_order,
                MatrixBase<BaseFloat> *feats);
+void ApplySigmoidScale(BaseFloat sig_thr, 
+               BaseFloat sig_slope,
+               MatrixBase<BaseFloat> *feat);
+void ApplyLtsv(int ar_order, 
+               int ctx_win, 
+               BaseFloat ltsv_sigmoidSlope,
+               BaseFloat ltsv_sigmoidThr, 
+               MatrixBase<BaseFloat> *feats,
+               Matrix<BaseFloat> *ltsv);
+void ApplyColSum( Matrix<BaseFloat> *data,
+                  Vector<BaseFloat> *colsum);
+void ApplyColMean( Matrix<BaseFloat> *data,
+                   Vector<BaseFloat> *colmean);
+void ApplySort( VectorBase<BaseFloat> *s); 
+void ApplyMedianfiltering(int ctx_win,   
+               VectorBase<BaseFloat> *data); 
 
 }  // namespace kaldi
 
-#endif  // KALDI_TRANSFORM_ARMA_H_
+#endif  // KALDI_TRANSFORM_FEATXTRA_FUNCTIONS_H_
