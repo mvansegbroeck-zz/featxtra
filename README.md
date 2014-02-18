@@ -12,5 +12,6 @@ List of functions
 * Gammatone Frequency Cepstral Coefficients (GFCC)
 * Long-Term-Spectral-Variability (LTSV) 
 * Voice Activity Detection based on voicing probability and LTSV
+* ...
 
-* more to follow ...
+[more to follow ...]
