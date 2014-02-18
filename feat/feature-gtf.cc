@@ -55,6 +55,12 @@ Gtf::~Gtf() {
     delete srfft_;
 }
 
+Vector<BaseFloat> Gtf::GetCosine(Vector<BaseFloat> vector) {
+  Vector<BaseFloat> vector_out(vector);
+  for (MatrixIndexT i = 0; i < vector.Dim(); i++) vector_out(i) = cos(vector(i));
+  return vector_out;
+}
+
 void Gtf::ComputeGammatoneMatrix(Matrix<BaseFloat> *gammatone_matrix_) {
 
   // define variables
