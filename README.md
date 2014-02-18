@@ -1,5 +1,5 @@
 # featxtra
-List of functions
+List of Front-end Signal Processing functions for [Kaldi](http://kaldi.sourceforge.net)
 
 ## featbin
 
