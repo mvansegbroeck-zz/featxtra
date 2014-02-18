@@ -1,8 +1,7 @@
 # featxtra
-List of Front-end Signal Processing functions for [Kaldi](http://kaldi.sourceforge.net)
+Featxtra lists a set of front-end tools and Signal Processing functions for [Kaldi](http://kaldi.sourceforge.net)
 
 ## featbin
-
 * featbin/compute-gtf-feats
   - extract Gammatone Frequency Representation (GTF)
   - extract Gammatone Frequency Cepstral Coefficients (GFCC)
@@ -16,6 +15,9 @@ List of Front-end Signal Processing functions for [Kaldi](http://kaldi.sourcefor
   - extract specified dimension range out of a feature matrix
 
 ## feat
-
 * feat/feature-gtf
   - GTF and GFCC feature implementation code
+
+## transform
+* transform/featxtra-functions
+  - additional signal processing functions
