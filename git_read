@@ -1,4 +1,0 @@
-git add *
-git commit -m 'commit 2/12/14'
-git push origin master
-git clean -d -x -f
