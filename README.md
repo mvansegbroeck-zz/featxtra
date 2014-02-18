@@ -1,7 +1,8 @@
 # Featxtra
 The featxtra toolbox lists a set of front-end tools and Signal Processing functions for [Kaldi](http://kaldi.sourceforge.net)
 The toolbox includes:
-* feature extraction for speech signals (Gammatone Frequency Representation, Gammatone Frequency Cepstral Coefficients)
+* feature extraction for speech signals
+  - Gammatone Frequency Representation, Gammatone Frequency Cepstral Coefficients
 * Voice Activity Detection 
 * additional signal filter operations
 
