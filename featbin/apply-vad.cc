@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
     std::string rspecifier = po.GetArg(1);
     std::string wspecifier = po.GetArg(2);
 
-    KALDI_ASSERT(vad_thr > 0 || ctx_win > 0);
+    KALDI_ASSERT(vad_thr > 0 && ctx_win > 0);
     
     BaseFloatMatrixWriter kaldi_writer(wspecifier);
     SequentialBaseFloatMatrixReader kaldi_reader(rspecifier);
