@@ -26,7 +26,7 @@ void ApplyArma(int ar_order,
                MatrixBase<BaseFloat> *feats) {
   KALDI_ASSERT(feats != NULL);
   
-  int32 dim = feats->NumCols() - 1;
+  int32 dim = feats->NumCols();
   int32 num_frames = feats->NumRows();
   Matrix<BaseFloat> featsmvn(*feats);
 
@@ -162,20 +162,22 @@ void ApplyMedianfiltering(int ctx_win,
   MatrixIndexT num_singval = data->Dim();
   Vector<BaseFloat> moving_context;
   Vector<BaseFloat> data_copy(*data);
-  int ctx_win_half = floor(ctx_win/2.0);
+  int ctx_win_half = ctx_win / 2; // integer division
+  int is_odd_ctx_win = ctx_win % 2;
+  int data_tail_range_start = num_singval-ctx_win_half+(1-is_odd_ctx_win);
   for (int32 k = 0; k < num_singval; k++) {
     moving_context.Resize(ctx_win); // reset to zero values
     if (k < ctx_win_half) { 
-      moving_context.Range(0,ctx_win_half+k).CopyFromVec(data_copy.Range(k, ctx_win_half+k));  // zero padding
+      moving_context.Range(0,ctx_win_half+k).CopyFromVec(data_copy.Range(0, ctx_win_half+k));  // zero padding
     }
-    else if (k > num_singval-ctx_win_half) { 
+    else if (k >= data_tail_range_start) { 
       moving_context.Range(0,ctx_win_half+num_singval-k).CopyFromVec(data_copy.Range(k-ctx_win_half, ctx_win_half+num_singval-k)); // zero padding
     }
     else {
       moving_context.CopyFromVec(data_copy.Range(k-ctx_win_half, ctx_win));
     }
     ApplySort(&moving_context);
-    (*data)(k) = (ctx_win % 2 == 0 ? (moving_context(ctx_win_half) + moving_context(ctx_win_half-1)) / 2 : moving_context(ctx_win_half));
+    (*data)(k) = (is_odd_ctx_win == 0 ? (moving_context(ctx_win_half) + moving_context(ctx_win_half-1)) / 2 : moving_context(ctx_win_half));
   }
 }
 

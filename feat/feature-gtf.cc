@@ -80,7 +80,7 @@ void Gtf::ComputeGammatoneMatrix(Matrix<BaseFloat> *gammatone_matrix_) {
   int order = 1;
   Vector<BaseFloat> ucirc_real(maxlen);
   Vector<BaseFloat> ucirc_imag(maxlen);
-  for (MatrixIndexT i = 0; i <= maxlen; i++) { 
+  for (MatrixIndexT i = 0; i < maxlen; i++) { 
     ucirc_real(i) = cos(M_2PI*i/nfft);
     ucirc_imag(i) = sin(M_2PI*i/nfft);
   }
@@ -132,7 +132,7 @@ void Gtf::ComputeGammatoneMatrix(Matrix<BaseFloat> *gammatone_matrix_) {
     
     Vector<BaseFloat> gtcol_(maxlen);
     BaseFloat g6r, g6i, g6ic, g7;
-    for (MatrixIndexT j = 0; j <= maxlen; j++) { 
+    for (MatrixIndexT j = 0; j < maxlen; j++) { 
       g6r = pole_real - ucirc_real(j);
       g6i = pole_imag - ucirc_imag(j);
       g6ic = -pole_imag - ucirc_imag(j);
