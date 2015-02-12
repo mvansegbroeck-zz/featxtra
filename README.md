@@ -4,6 +4,8 @@ The featxtra toolbox lists a set of front-end tools and Signal Processing functi
 The toolbox includes:
 * feature extraction for speech signals
   - Gammatone Frequency Representation, Gammatone Frequency Cepstral Coefficients
+  - Gabor Features
+  - DCT features (apply on ltsv, voicing stream)
 * Voice Activity Detection 
 * additional signal filter operations
 
@@ -13,6 +15,10 @@ The toolbox includes:
 * featbin/compute-gtf-feats
   - extract Gammatone Frequency Representation (GTF)
   - extract Gammatone Frequency Cepstral Coefficients (GFCC)
+* featbin/compute-gabor-feats
+  - extract Gabor Features (GBF)
+* featbin/compute-dct-feats
+  - extract DCT Features from time domain signal
 * featbin/apply-arma
   - apply Auto-Regressive Moving Average (ARMA) filtering on a spectral representation (e.g GTF )
 * featbin/apply-ltsv
