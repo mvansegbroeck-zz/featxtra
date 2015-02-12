@@ -1,7 +1,6 @@
 // transform/featxtra-functions.cc
 
-// Copyright 2009-2013 Microsoft Corporation
-//                     Johns Hopkins University (author: Daniel Povey)
+// Copyright 2014 University of Southern California (author: Maarten Van Segbroeck)
 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,140 +24,127 @@ namespace kaldi {
 void ApplyArma(int ar_order,
                MatrixBase<BaseFloat> *feats) {
   KALDI_ASSERT(feats != NULL);
-  
-  int32 dim = feats->NumCols();
-  int32 num_frames = feats->NumRows();
+
+  MatrixIndexT dim = feats->NumCols();
+  MatrixIndexT num_frames = feats->NumRows();
   Matrix<BaseFloat> featsmvn(*feats);
 
   // Apply the normalization.
   BaseFloat tmp1, tmp2;
   for (int32 d = 0; d < dim; d++) {
-    tmp1=0; tmp2=0; 
+    tmp1 = 0;
+    tmp2 = 0;
     for (int32 i = 0; i < num_frames-ar_order; i++) {
-      if (i < ar_order) { 
-        (*feats)(i,d) = 0.01*featsmvn(i,d) ; // suppress values 
-      }
-      else if (i == ar_order) { 
+      if (i < ar_order) {
+        (*feats)(i, d) = 0.01*featsmvn(i, d);  // suppress values
+      } else if (i == ar_order) {
         for (int32 k = 0; k < ar_order; k++) {
-          tmp1 += (*feats)(i-1-k, d);   
-          tmp2 += featsmvn(i+k, d);   
+          tmp1 += (*feats)(i-1-k, d);
+          tmp2 += featsmvn(i+k, d);
         }
-        tmp2 += featsmvn(i+ar_order, d);   
-        (*feats)(i,d) = ( tmp1 + tmp2 ) / ( 2*ar_order + 1 ); 
-      } 
-      else 
-      { 
-       tmp1 += (*feats)(i-1, d) - (*feats)(i-1-ar_order, d);   
-       tmp2 += featsmvn(i+ar_order, d) - featsmvn(i-1, d);   
-       (*feats)(i,d) = ( tmp1 + tmp2 ) / ( 2*ar_order + 1 ); 
+        tmp2 += featsmvn(i+ar_order, d);
+        (*feats)(i, d) = ( tmp1 + tmp2 ) / ( 2*ar_order + 1 );
+      } else {
+       tmp1 += (*feats)(i-1, d) - (*feats)(i-1-ar_order, d);
+       tmp2 += featsmvn(i+ar_order, d) - featsmvn(i-1, d);
+       (*feats)(i, d) = ( tmp1 + tmp2 ) / ( 2*ar_order + 1 );
       }
     }
   }
 }
 
-void ApplySigmoidScale(BaseFloat sigmoidThr, 
+void ApplySigmoidScale(BaseFloat sigmoidThr,
                BaseFloat sigmoidSlope,
-               MatrixBase<BaseFloat> *feat) {
-  feat->Scale(2);
-  feat->Add(-sigmoidThr);
-  feat->Scale(-1/sigmoidSlope);
-  feat->ApplyExp();
-  feat->Add(1);
-  feat->InvertElements();
+               MatrixBase<BaseFloat> *feats) {
+  MatrixIndexT num_rows = feats->NumRows();
+  MatrixIndexT num_cols = feats->NumCols();
+  for (MatrixIndexT r = 0; r < num_rows; r++) {
+    for (MatrixIndexT c = 0; c < num_cols; c++) {
+      (*feats)(r, c) = static_cast<BaseFloat>(1 / (Exp(-1 / sigmoidSlope *
+                       (2 * (*feats)(r, c) - sigmoidThr)) + 1));
+    }
+  }
 }
 
-void ApplyLtsv(int ar_order, 
-               int ctx_win, 
+void ApplyLtsv(int ctx_win,
                BaseFloat ltsv_sigmoidSlope,
-               BaseFloat ltsv_sigmoidThr, 
-               MatrixBase<BaseFloat> *feats,
+               BaseFloat ltsv_sigmoidThr,
+               const MatrixBase<BaseFloat> *feats,
                Matrix<BaseFloat> *ltsv) {
-
   KALDI_ASSERT(feats != NULL);
-  int32 dim = feats->NumCols();
-  int32 num_frames = feats->NumRows();
-  Matrix<BaseFloat> featsin(*feats);
-  featsin.Resize(num_frames+ctx_win, dim, kCopyData);
-  Matrix<BaseFloat> featsappend(feats->Range(num_frames-ctx_win-1, ctx_win, 0, dim-1));
-  featsin.Range(num_frames, ctx_win, 0, dim-1).CopyFromMat(featsappend);
+  MatrixIndexT dim = feats->NumCols();
+  MatrixIndexT num_frames = feats->NumRows();
+  // Resize ctx_win if larger than number of frames
+  if (num_frames < ctx_win+1)
+    ctx_win = num_frames-1;
+  Matrix<BaseFloat> featsin(num_frames+ctx_win, dim);
+  SubMatrix<BaseFloat> featsappend(feats->Range(num_frames-ctx_win-1,
+    ctx_win, 0, dim));
+  featsin.Range(0, num_frames, 0, dim).CopyFromMat(*feats);
+  featsin.Range(num_frames, ctx_win, 0, dim).CopyFromMat(featsappend);
   (*ltsv).Resize(num_frames, 1);
 
-  Vector<BaseFloat> moving_context(dim), featsnorm(dim), featsnormlog(dim), featsentropy(dim), featsvar(dim);
+  Vector<BaseFloat> moving_context(dim), ltsv_bins(dim), ltsv_bins_log(dim);
   moving_context.CopyFromVec(featsin.Row(0));
   moving_context.Scale(round(ctx_win/2));
   for (int32 k = 0; k < round(ctx_win/2); k++)
     moving_context.AddVec(1.0, featsin.Row(k));
-    
-  BaseFloat ltsv_val;
+
+  BaseFloat ltsv_val = 0.0;
   for (int32 k = 0; k < num_frames; k++) {
-    if (k < round(ctx_win/2)) { 
+    if (k < round(ctx_win/2)) {
        moving_context.AddVec(-1.0, featsin.Row(0));
-    }
-    else {
+    } else {
        moving_context.AddVec(-1.0, featsin.Row(k-round(ctx_win/2)));
     }
     moving_context.AddVec(1.0, featsin.Row(k+round(ctx_win/2)));
 
-    featsnorm.CopyFromVec(featsin.Row(k));
-    featsnorm.DivElements(moving_context);
-    featsnorm.Scale(100);
-    featsnormlog.CopyFromVec(featsnorm);
-    featsnormlog.ApplyLog();
+    ltsv_bins.CopyFromVec(featsin.Row(k));
+    ltsv_bins.DivElements(moving_context);
+    ltsv_bins.Scale(100);
+    ltsv_bins_log.CopyFromVec(ltsv_bins);
+    ltsv_bins_log.ApplyLog();
+
     // entropy
-    featsentropy.CopyFromVec(featsnorm);
-    featsentropy.MulElements(featsnormlog);
-    featsentropy.Scale(-1);
-    // var
-    featsvar.CopyFromVec(featsentropy);
-    featsvar.Add(-featsentropy.Sum()/dim);
-    featsvar.ApplyPow(2.0);
+    ltsv_bins.MulElements(ltsv_bins_log);
+    ltsv_bins.Scale(-1);
+
+    // variance
+    ltsv_bins.Add(-ltsv_bins.Sum()/dim);
+    ltsv_bins.ApplyPow(2.0);
+
     // ltsv
-    if (k < num_frames - round(ctx_win/2)) 
-      ltsv_val = featsvar.Sum()/dim;
+    if (k < num_frames - round(ctx_win/2))
+      ltsv_val = ltsv_bins.Sum()/dim;
     (*ltsv)(k, 0) = ltsv_val;
   }
-  // sigmoid 
+  // sigmoid
   ApplySigmoidScale(ltsv_sigmoidThr, ltsv_sigmoidSlope, ltsv);
 }
 
-void ApplyColSum( Matrix<BaseFloat> *data,
+void ApplyColSum(const Matrix<BaseFloat> &data,
                   Vector<BaseFloat> *colsum ) {
-
-  MatrixIndexT num_cols = data->NumCols();
-  MatrixIndexT num_rows = data->NumRows();
+  MatrixIndexT num_cols = data.NumCols();
+  MatrixIndexT num_rows = data.NumRows();
   colsum->Resize(num_rows);
-  Matrix<BaseFloat> data_copy(*data);
-  data_copy.Transpose();
-  for (MatrixIndexT d = 0; d < num_cols; d++) {
-    colsum->AddVec(1,data_copy.Row(d));
+  for (MatrixIndexT r = 0; r < num_rows; r++) {
+    (*colsum)(r) = data.Range(r, 1, 0, num_cols).Sum();
   }
-} 
-
-void ApplyColMean( Matrix<BaseFloat> *data,
-                   Vector<BaseFloat> *colmean ) {
-
-  MatrixIndexT num_cols = data->NumCols();
-  ApplyColSum(data, colmean);
-  colmean->Scale(1.0/num_cols);
-} 
-
-void ApplySort( VectorBase<BaseFloat> *s ) { 
-
-  MatrixIndexT num_singval = s->Dim();
-  std::vector<std::pair<BaseFloat, MatrixIndexT> > vec(num_singval);
-  for (MatrixIndexT d = 0; d < num_singval; d++) {
-    BaseFloat val = (*s)(d);
-    vec[d] = std::pair<BaseFloat, MatrixIndexT>(val, d);
-  }
-  std::sort(vec.begin(), vec.end());
-  Vector<BaseFloat> s_copy(*s);
-  for (MatrixIndexT d = 0; d < num_singval; d++)
-    (*s)(d) = s_copy(vec[d].second);
 }
 
-void ApplyMedianfiltering(int ctx_win,   
-                          VectorBase<BaseFloat> *data ) { 
+void ApplyColMean(const Matrix<BaseFloat> &data,
+                   Vector<BaseFloat> *colmean ) {
+  MatrixIndexT num_cols = data.NumCols();
+  ApplyColSum(data, colmean);
+  colmean->Scale(1.0/num_cols);
+}
 
+void ApplySort(VectorBase<BaseFloat> *s ) {
+  std::sort(s->Data(), s->Data()+s->Dim());
+}
+
+void ApplyMedianfiltering(int ctx_win,
+                          VectorBase<BaseFloat> *data ) {
   MatrixIndexT num_singval = data->Dim();
   Vector<BaseFloat> moving_context;
   Vector<BaseFloat> data_copy(*data);
@@ -166,19 +152,136 @@ void ApplyMedianfiltering(int ctx_win,
   int is_odd_ctx_win = ctx_win % 2;
   int data_tail_range_start = num_singval-ctx_win_half+(1-is_odd_ctx_win);
   for (int32 k = 0; k < num_singval; k++) {
-    moving_context.Resize(ctx_win); // reset to zero values
-    if (k < ctx_win_half) { 
-      moving_context.Range(0,ctx_win_half+k).CopyFromVec(data_copy.Range(0, ctx_win_half+k));  // zero padding
+    moving_context.Resize(ctx_win);  // reset to zero values
+    if (k < ctx_win_half) {
+      moving_context.Range(0,
+       ctx_win_half+k).CopyFromVec(data_copy.Range(0,
+       ctx_win_half+k));  // zero padding
     }
-    else if (k >= data_tail_range_start) { 
-      moving_context.Range(0,ctx_win_half+num_singval-k).CopyFromVec(data_copy.Range(k-ctx_win_half, ctx_win_half+num_singval-k)); // zero padding
-    }
-    else {
+    else if (k >= data_tail_range_start) {
+      moving_context.Range(0,
+       ctx_win_half+num_singval-k).CopyFromVec(data_copy.Range(k-ctx_win_half,
+       ctx_win_half+num_singval-k));  // zero padding
+    } else {
       moving_context.CopyFromVec(data_copy.Range(k-ctx_win_half, ctx_win));
     }
     ApplySort(&moving_context);
-    (*data)(k) = (is_odd_ctx_win == 0 ? (moving_context(ctx_win_half) + moving_context(ctx_win_half-1)) / 2 : moving_context(ctx_win_half));
+    (*data)(k) = (is_odd_ctx_win == 0 ? (moving_context(ctx_win_half) +
+      moving_context(ctx_win_half-1)) / 2 : moving_context(ctx_win_half));
   }
+}
+
+void ComputeComplexFft(Matrix<BaseFloat> *real_data,
+                        Matrix<BaseFloat> *imag_data,
+                        int32 dim0,
+                        int32 dim1,
+                        bool forward_fft) {
+  // Copy input matrices into matrices of desired dimensionality
+  real_data->Resize(dim0, dim1, kCopyData);
+  imag_data->Resize(dim0, dim1, kCopyData);
+
+  // Apply first FFT to the matrix rows 
+  Matrix<BaseFloat> gfilter_fft(2*dim0, dim1);
+  for (MatrixIndexT i = 0 ; i < dim0; i++) {  
+    gfilter_fft.Row(i*2).CopyFromVec(real_data->Row(i));
+    gfilter_fft.Row(i*2 + 1).CopyFromVec(imag_data->Row(i));
+  }
+  gfilter_fft.Transpose();
+  Vector<BaseFloat> tmp_fft1(2*dim0);
+  for (MatrixIndexT i = 0 ; i < dim1; i++) {  
+    tmp_fft1.CopyFromVec(gfilter_fft.Row(i));
+    ComplexFft(&tmp_fft1, forward_fft);
+    gfilter_fft.Row(i).CopyFromVec(tmp_fft1);
+  }
+
+  // Transpose : fft(A).' 
+  gfilter_fft.Transpose();
+  Matrix<BaseFloat> gfilter_fft_imag(dim0, dim1);
+  Matrix<BaseFloat> gfilter_fft_real(dim0, dim1);
+  for (MatrixIndexT i = 0 ; i < dim0; i++) {  
+    gfilter_fft_real.Row(i).CopyFromVec(gfilter_fft.Row(i*2));
+    gfilter_fft_imag.Row(i).CopyFromVec(gfilter_fft.Row(i*2 + 1));
+  }
+  gfilter_fft_imag.Transpose();
+  gfilter_fft_real.Transpose();
+
+  // Apply second FFT to the matrix rows : fft(fft(A).')
+  gfilter_fft.Resize(2*dim1, dim0);
+  for (MatrixIndexT i = 0 ; i < dim1; i++) {  
+    gfilter_fft.Row(i*2).CopyFromVec(gfilter_fft_real.Row(i));
+    gfilter_fft.Row(i*2 + 1).CopyFromVec(gfilter_fft_imag.Row(i));
+  }
+  gfilter_fft.Transpose();
+  Vector<BaseFloat> tmp_fft2(2*dim1);
+  for (MatrixIndexT i = 0 ; i < dim0; i++) {  
+    tmp_fft2.CopyFromVec(gfilter_fft.Row(i));
+    ComplexFft(&tmp_fft2, forward_fft);
+    gfilter_fft.Row(i).CopyFromVec(tmp_fft2);
+  }
+
+  // Transpose : fft(fft(A).').'
+  gfilter_fft.Transpose();
+  for (MatrixIndexT i = 0 ; i < dim1; i++) {  
+    gfilter_fft_real.Row(i).CopyFromVec(gfilter_fft.Row(i*2));
+    gfilter_fft_imag.Row(i).CopyFromVec(gfilter_fft.Row(i*2 + 1));
+  }
+  gfilter_fft_imag.Transpose();
+  gfilter_fft_real.Transpose();
+ 
+  real_data->CopyFromMat(gfilter_fft_real);
+  imag_data->CopyFromMat(gfilter_fft_imag);
+}
+
+void ComputeComplexFftPow2(Matrix<BaseFloat> *real_data,
+                        Matrix<BaseFloat> *imag_data,
+                        int32 dim0,
+                        int32 dim1,
+                        bool forward_fft) {
+
+  if ( (dim0 & (dim0-1)) != 0 || dim0 <= 1)
+    KALDI_ERR << "ComputeComplexFftPow2 called with invalid number of points "
+              << dim0;
+  if ( (dim1 & (dim1-1)) != 0 || dim1 <= 1)
+    KALDI_ERR << "ComputeComplexFftPow2 called with invalid number of points "
+              << dim1;
+
+  // Copy input matrices into matrices of desired dimensionality
+  real_data->Resize(dim0, dim1, kCopyData);
+  imag_data->Resize(dim0, dim1, kCopyData);
+
+  Matrix<BaseFloat> *gfilter_fft_imag=real_data;
+  Matrix<BaseFloat> *gfilter_fft_real=imag_data;
+
+  // Apply first FFT to the matrix rows 
+  gfilter_fft_real->Transpose();
+  gfilter_fft_imag->Transpose();
+  SplitRadixComplexFft<BaseFloat> srfft1(dim0);
+  Vector<BaseFloat> tmp_fft1_real(dim0);
+  Vector<BaseFloat> tmp_fft1_imag(dim0);
+  for (MatrixIndexT i = 0 ; i < dim1; i++) {  
+      tmp_fft1_real.CopyFromVec(gfilter_fft_real->Row(i));
+      tmp_fft1_imag.CopyFromVec(gfilter_fft_imag->Row(i));
+      srfft1.Compute(tmp_fft1_real.Data(), tmp_fft1_imag.Data(), forward_fft);
+      gfilter_fft_real->Row(i).CopyFromVec(tmp_fft1_real);
+      gfilter_fft_imag->Row(i).CopyFromVec(tmp_fft1_imag);
+  }
+
+  // Transpose : fft(A).' 
+  gfilter_fft_imag->Transpose();
+  gfilter_fft_real->Transpose();
+
+  // Apply second FFT to the matrix rows : fft(fft(A).')
+  SplitRadixComplexFft<BaseFloat> srfft2(dim1);
+  Vector<BaseFloat> tmp_fft2_real(dim1);
+  Vector<BaseFloat> tmp_fft2_imag(dim1);
+  for (MatrixIndexT i = 0 ; i < dim0; i++) {  
+      tmp_fft2_real.CopyFromVec(gfilter_fft_real->Row(i));
+      tmp_fft2_imag.CopyFromVec(gfilter_fft_imag->Row(i));
+      srfft2.Compute(tmp_fft2_real.Data(), tmp_fft2_imag.Data(), forward_fft);
+      gfilter_fft_real->Row(i).CopyFromVec(tmp_fft2_real);
+      gfilter_fft_imag->Row(i).CopyFromVec(tmp_fft2_imag);
+  }
+
 }
 
 }  // namespace kaldi

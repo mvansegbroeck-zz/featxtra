@@ -1,7 +1,6 @@
 // transform/cmvn.h
 
-// Copyright 2009-2013 Microsoft Corporation
-//                     Johns Hopkins University (author: Daniel Povey)
+// Copyright 2014 University of Southern California (author: Maarten Van Segbroeck)
 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,28 +21,48 @@
 
 #include "base/kaldi-common.h"
 #include "matrix/matrix-lib.h"
+#include "feat/feature-functions.h"
 
 namespace kaldi {
 
-/// Apply FEATXTRA_FUNCTIONS (AutoRegressive-moving-average) normalization to a matrix of features.
+// Apply AutoRegressive Moving Average normalization to a matrix
 void ApplyArma(int ar_order,
                MatrixBase<BaseFloat> *feats);
-void ApplySigmoidScale(BaseFloat sig_thr, 
+// Apply Sigmoid scaling to a matrix
+void ApplySigmoidScale(BaseFloat sig_thr,
                BaseFloat sig_slope,
-               MatrixBase<BaseFloat> *feat);
-void ApplyLtsv(int ar_order, 
-               int ctx_win, 
+               MatrixBase<BaseFloat> *feats);
+// Apply Long-Term Spectral Variability to a matrix
+void ApplyLtsv(int ctx_win,
                BaseFloat ltsv_sigmoidSlope,
-               BaseFloat ltsv_sigmoidThr, 
-               MatrixBase<BaseFloat> *feats,
+               BaseFloat ltsv_sigmoidThr,
+               const MatrixBase<BaseFloat> *feats,
                Matrix<BaseFloat> *ltsv);
-void ApplyColSum( Matrix<BaseFloat> *data,
+// Compute sum over matrix columns
+void ApplyColSum(const Matrix<BaseFloat> &data,
                   Vector<BaseFloat> *colsum);
-void ApplyColMean( Matrix<BaseFloat> *data,
+// Compute mean over matrix columns
+void ApplyColMean(const Matrix<BaseFloat> &data,
                    Vector<BaseFloat> *colmean);
-void ApplySort( VectorBase<BaseFloat> *s); 
-void ApplyMedianfiltering(int ctx_win,   
-               VectorBase<BaseFloat> *data); 
+// Sort a vector
+void ApplySort(VectorBase<BaseFloat> *s);
+// Apply median filtering to a time domain signal (vector)
+void ApplyMedianfiltering(int ctx_win,
+               VectorBase<BaseFloat> *data);
+// Apply 2-dimensional FFT to a matrix of real and imaginary numbers
+//  function is implemented as fft(fft(A).').'
+void ComputeComplexFft(Matrix<BaseFloat> *real_data,
+	Matrix<BaseFloat> *imag_data,
+	int32 dim0,
+	int32 dim1,
+	bool forward_fft);
+// Apply 2-dimensional FFT to a matrix of real and imaginary numbers
+//  use this if matrix dimensions are a power of 2
+void ComputeComplexFftPow2(Matrix<BaseFloat> *real_data,
+	Matrix<BaseFloat> *imag_data,
+	int32 dim0,
+	int32 dim1,
+	bool forward_fft);
 
 }  // namespace kaldi
 
