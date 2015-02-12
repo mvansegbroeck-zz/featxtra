@@ -10,7 +10,7 @@ wavin=in/wav
 
 compute-kaldi-pitch-feats --sample-frequency=16000 scp:$wavin.scp ark:- | \
    extract-dims --start=1 --end=1 ark:- ark:out/vprob.ark
-compute-gtf-feats --verbose=2 --config=conf/gtf2.conf scp:$wavin.scp ark:- | \
+compute-gtf-feats --verbose=2 --config=conf/gtf.conf scp:$wavin.scp ark:- | \
    apply-arma --ar_order=5 ark:- ark:- | \
       apply-ltsv --ar_order=2 ark:- ark:out/ltsv.ark
 paste-feats ark:out/ltsv.ark ark:out/vprob.ark ark:- | \
