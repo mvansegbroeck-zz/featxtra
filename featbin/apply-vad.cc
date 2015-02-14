@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
         Vector<BaseFloat> vad_out;
    
         // Mean of the probability streams
-        ApplyColMean(&feats, &vad_out);
+        ApplyColMean(feats, &vad_out);
         // Median filtering of the resulting VAD probability stream
         ApplyMedianfiltering(ctx_win, &vad_out); 
 
