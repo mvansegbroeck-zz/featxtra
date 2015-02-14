@@ -34,11 +34,9 @@ int main(int argc, char *argv[]) {
 
     ParseOptions po(usage);
     std::string utt2spk_rspecifier;
-    int ar_order = 10;  // ARMA filter tab order
     int ctx_win  = 50; // context window parameter
     BaseFloat ltsv_slope = 0.2; // sigmoid slope parameter
     BaseFloat ltsv_thr   = 0.5; // sigmoid threshold parameter
-    po.Register("ar-order", &ar_order, "Order of the ARMA filtering [default: 10]");
     po.Register("ctx-win", &ctx_win, "Context window frame size [default: 50]");
     po.Register("ltsv-slope", &ltsv_slope, "Sigmoid slope parameter [default: 0.2]");
     po.Register("ltsv-thr", &ltsv_thr, "Sigmoid threshold parameter [default: 0.5]");
@@ -66,7 +64,7 @@ int main(int argc, char *argv[]) {
       std::string utt = feat_reader.Key();
       Matrix<BaseFloat> feat(feat_reader.Value());
       Matrix<BaseFloat> ltsv;
-      ApplyLtsv(ar_order, ctx_win, ltsv_slope, ltsv_thr, &feat, &ltsv);
+      ApplyLtsv(ctx_win, ltsv_slope, ltsv_thr, &feat, &ltsv);
       feat_writer.Write(utt, ltsv);
       num_done++;
     }
