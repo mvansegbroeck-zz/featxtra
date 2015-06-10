@@ -64,6 +64,10 @@ void ComputeComplexFftPow2(Matrix<BaseFloat> *real_data,
 	int32 dim1,
 	bool forward_fft);
 
+// Convert NCCF to POV conversion on kaldi pitch feats
+// Kaldi pitch feats are 2-dim features (NCCF, pitch in Hz)
+void ApplyNccfToPov(Matrix<BaseFloat>* kaldi_pitch_feats);
+
 }  // namespace kaldi
 
 #endif  // KALDI_TRANSFORM_FEATXTRA_FUNCTIONS_H_
