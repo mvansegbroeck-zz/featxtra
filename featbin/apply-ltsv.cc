@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
       std::string utt = feat_reader.Key();
       Matrix<BaseFloat> feat(feat_reader.Value());
       Matrix<BaseFloat> ltsv;
-      ApplyLtsv(ctx_win, ltsv_slope, ltsv_thr, feat, &ltsv);
+      ApplyLtsv(ctx_win, ltsv_slope, ltsv_thr, &feat, &ltsv);
       feat_writer.Write(utt, ltsv);
       num_done++;
     }
