@@ -23,12 +23,6 @@
 #include <iostream>
 using namespace std;
 
-namespace kaldi {
-
-  void ApplyNccfToPov(Matrix<BaseFloat>* raw_kaldi_pitch_feats);
-
-}
-
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
@@ -67,15 +61,4 @@ int main(int argc, char *argv[]) {
     std::cerr << e.what();
     return -1;
   }
-}
-
-namespace kaldi {
-
-void ApplyNccfToPov(Matrix<BaseFloat>* raw_kaldi_pitch_feats) {
-  MatrixIndexT num_frames = raw_kaldi_pitch_feats->NumRows();
-  for (MatrixIndexT frame = 0; frame < num_frames; ++frame) {
-    (*raw_kaldi_pitch_feats)(frame, 0) = NccfToPov((*raw_kaldi_pitch_feats)(frame, 0));
-  }
-}
-
 }
