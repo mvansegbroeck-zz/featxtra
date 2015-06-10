@@ -284,4 +284,24 @@ void ComputeComplexFftPow2(Matrix<BaseFloat> *real_data,
 
 }
 
+
+// This function is copied from KALDI (feat/pitch-functions.cc)
+inline BaseFloat NccfToPov(BaseFloat n) {
+  BaseFloat ndash = fabs(n);
+  if (ndash > 1.0) ndash = 1.0;  // just in case it was slightly outside [-1, 1]
+  BaseFloat r = -5.2 + 5.4 * exp(7.5 * (ndash - 1.0)) + 4.8 * ndash -
+    2.0 * exp(-10.0 * ndash) + 4.2 * exp(20.0 * (ndash - 1.0));
+  // r is the approximate log-prob-ratio of voicing, log(p/(1-p)).
+  BaseFloat p = 1.0 / (1 + exp(-1.0 * r));
+  KALDI_ASSERT(p - p == 0);  // Check for NaN/inf
+  return p;
+}
+
+void ApplyNccfToPov(Matrix<BaseFloat>* kaldi_pitch_feats) {
+  MatrixIndexT num_frames = kaldi_pitch_feats->NumRows();
+    for (MatrixIndexT frame = 0; frame < num_frames; ++frame) {
+      (*kaldi_pitch_feats)(frame, 0) = NccfToPov((*kaldi_pitch_feats)(frame, 0));
+  }
+}
+
 }  // namespace kaldi
