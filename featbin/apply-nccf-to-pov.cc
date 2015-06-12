@@ -1,4 +1,4 @@
-// featbin/apply-ltsv.cc
+// featbin/apply-nccf-to-pov.cc
 
 // Copyright 2009-2011  Microsoft Corporation
 
@@ -18,28 +18,21 @@
 #include "base/kaldi-common.h"
 #include "util/common-utils.h"
 #include "matrix/kaldi-matrix.h"
+#include "feat/pitch-functions.h"
 #include "transform/featxtra-functions.h"
 #include <iostream>
 using namespace std;
-
 
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
 
     const char *usage =
-        "Apply LTSV (Long Term Spectral Variability) measure on a matrix of spectral features\n"
-        "Per-utterance by default, or per-speaker if utt2spk option provided\n"
-        "Usage: apply-ltsv [options] feats-rspecifier feats-wspecifier\n";
+        "Transform raw NCCF to accurate Probability of Voicing (POV).\n"
+        "Kaldi pitch extractor (compute-kaldi-pitch) outputs (NCCF, pitch).\n"
+        "This program transforms (NCCF, pitch) -> (POV, pitch).\n";
 
     ParseOptions po(usage);
-    std::string utt2spk_rspecifier;
-    int ctx_win  = 50; // context window parameter
-    BaseFloat ltsv_slope = 0.2; // sigmoid slope parameter
-    BaseFloat ltsv_thr   = 0.5; // sigmoid threshold parameter
-    po.Register("ctx-win", &ctx_win, "Context window frame size [default: 50]");
-    po.Register("ltsv-slope", &ltsv_slope, "Sigmoid slope parameter [default: 0.2]");
-    po.Register("ltsv-thr", &ltsv_thr, "Sigmoid threshold parameter [default: 0.5]");
 
     po.Read(argc, argv);
 
@@ -56,16 +49,11 @@ int main(int argc, char *argv[]) {
     SequentialBaseFloatMatrixReader feat_reader(feat_rspecifier);
     BaseFloatMatrixWriter feat_writer(feat_wspecifier);
     
-    if (utt2spk_rspecifier != "")
-      KALDI_ERR << "--utt2spk option not compatible with rxfilename as input "
-                 << "(did you forget ark:?)";
-
     for (;!feat_reader.Done(); feat_reader.Next()) {
       std::string utt = feat_reader.Key();
       Matrix<BaseFloat> feat(feat_reader.Value());
-      Matrix<BaseFloat> ltsv;
-      ApplyLtsv(ctx_win, ltsv_slope, ltsv_thr, &feat, &ltsv);
-      feat_writer.Write(utt, ltsv);
+      ApplyNccfToPov(&feat);
+      feat_writer.Write(utt, feat);
       num_done++;
     }
     return (num_done != 0 ? 0 : 1);
@@ -74,5 +62,3 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 }
-
-
