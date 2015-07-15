@@ -38,6 +38,7 @@ struct GtfOptions {
   bool apply_dct;  // make GFCC, else GF filtered spectra
   int32 num_bins;  // e.g. 13: num cepstral coeffs, counting zero.
   int32 num_ceps;  // e.g. 23: num cepstral coeffs, counting zero.
+  bool use_c0;  // use c0; else removed from feature vector
   bool use_energy;  // use energy; else C0
   BaseFloat energy_floor;
   bool raw_energy;  // compute energy before preemphasis and hamming window (else after)
@@ -48,6 +49,7 @@ struct GtfOptions {
   GtfOptions():  apply_dct(false),
                  num_bins(64),
                  num_ceps(23),
+                 use_c0(true),
                  use_energy(true),
                  energy_floor(0.0),  // not in log scale: a small value e.g. 1.0e-10
                  raw_energy(true),
@@ -58,6 +60,7 @@ struct GtfOptions {
     po->Register("apply_dct", &apply_dct, "Apply DCT transform implies computing GFCC, else compute GammaTone filtered Spectra (GTF)");
     po->Register("num-bins", &num_bins, "Number of Gammatone filterbanks");
     po->Register("num-ceps", &num_ceps, "Number of cepstra in GFCC computation (including C0)");
+    po->Register("use-c0", &use_c0, "Use c0 (C0) in GFCC computation");
     po->Register("use-energy", &use_energy, "Use energy (not C0) in GFCC computation");
     po->Register("energy-floor", &energy_floor, "Floor on energy (absolute, not relative) in GFCC computation");
     po->Register("raw-energy", &raw_energy, "If true, compute energy (if using energy) before Hamming window and preemphasis");

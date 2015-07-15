@@ -153,7 +153,7 @@ void Gtf::Compute(const VectorBase<BaseFloat> &wave,
                    Vector<BaseFloat> *wave_remainder) {
   assert(output != NULL);
   int32 rows_out = NumFrames(wave.Dim(), opts_.frame_opts);
-  int32 cols_out = (opts_.apply_dct)? opts_.num_ceps : opts_.num_bins;
+  int32 cols_out = (opts_.apply_dct)? (opts_.use_c0)? opts_.num_ceps : opts_.num_ceps-1 : opts_.num_bins;
   if (rows_out == 0)
     KALDI_ERR << "Gtf::Compute, no frames fit in file (#samples is " << wave.Dim() << ")";
   output->Resize(rows_out, cols_out);
@@ -185,10 +185,19 @@ void Gtf::Compute(const VectorBase<BaseFloat> &wave,
     Vector<BaseFloat> gtf(opts_.num_bins);
     gtf.AddMatVec(1.0, gammatone_matrix_, kNoTrans, power_spectrum, 0.0);
     gtf.ApplyPow(1.0/3);
-    if (opts_.apply_dct == 0.0){
-      this_gtf.CopyFromVec(gtf); } 
-    else {
-      this_gtf.AddMatVec(1.0, dct_matrix_, kNoTrans, gtf, 0.0); }
+    //if (opts_.apply_dct == 0.0){
+    //  this_gtf.CopyFromVec(gtf); } 
+    //else {
+    //  this_gtf.AddMatVec(1.0, dct_matrix_, kNoTrans, gtf, 0.0); }
+    if (opts_.apply_dct) {
+      if (opts_.use_c0) {
+        this_gtf.AddMatVec(1.0, dct_matrix_, kNoTrans, gtf, 0.0);
+      } else {
+        this_gtf.AddMatVec(1.0, dct_matrix_.RowRange(1, dct_matrix_.NumRows()-1), kNoTrans, gtf, 0.0); 
+      }
+    } else {
+      this_gtf.CopyFromVec(gtf);
+    }
     
   }
 }
