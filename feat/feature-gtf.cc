@@ -185,10 +185,6 @@ void Gtf::Compute(const VectorBase<BaseFloat> &wave,
     Vector<BaseFloat> gtf(opts_.num_bins);
     gtf.AddMatVec(1.0, gammatone_matrix_, kNoTrans, power_spectrum, 0.0);
     gtf.ApplyPow(1.0/3);
-    //if (opts_.apply_dct == 0.0){
-    //  this_gtf.CopyFromVec(gtf); } 
-    //else {
-    //  this_gtf.AddMatVec(1.0, dct_matrix_, kNoTrans, gtf, 0.0); }
     if (opts_.apply_dct) {
       if (opts_.use_c0) {
         this_gtf.AddMatVec(1.0, dct_matrix_, kNoTrans, gtf, 0.0);
