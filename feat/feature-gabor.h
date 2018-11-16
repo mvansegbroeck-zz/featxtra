@@ -20,6 +20,8 @@
 
 #include "feat/feature-functions.h"
 #include "transform/featxtra-functions.h"
+#include "feat/feature-window.h"
+#include "feat/mel-computations.h"
 
 #include <iostream>
 using namespace std;

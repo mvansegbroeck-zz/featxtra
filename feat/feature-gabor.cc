@@ -565,7 +565,7 @@ Vector<BaseFloat> *wave_remainder) {
            
   for (int32 r = 0; r < rows_out; r++) {  // r is frame index.
     
-    ExtractWindow(wave, r, opts_.frame_opts, feature_window_function_, &window, NULL);
+    ExtractWindow(0, wave, r, opts_.frame_opts, feature_window_function_, &window, NULL);
 
     if (srfft_) srfft_->Compute(window.Data(), true);  // Compute FFT using
     // split-radix algorithm.

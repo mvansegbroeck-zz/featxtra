@@ -19,6 +19,7 @@
 #define KALDI_FEAT_FEATURE_DCTF_H_
 
 #include "feat/feature-functions.h"
+#include "feat/feature-window.h"
 
 namespace kaldi {
 /// @addtogroup  feat FeatureExtraction
