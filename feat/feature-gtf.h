@@ -21,6 +21,7 @@
 #include <string>
 
 #include "feat/feature-functions.h"
+#include "feat/feature-window.h"
 #include <iostream>
 using namespace std;
 

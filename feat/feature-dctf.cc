@@ -17,6 +17,7 @@
 
 
 #include "feat/feature-dctf.h"
+#include "feat/feature-window.h"
 
 namespace kaldi {
 
@@ -51,7 +52,7 @@ void Dctf::Compute(const VectorBase<BaseFloat> &wave,
     ExtractWaveformRemainder(wave, opts_.frame_opts, wave_remainder);
   Vector<BaseFloat> window;  // windowed waveform.
   for (int32 r = 0; r < rows_out; r++) {  // r is frame index..
-    ExtractWindow(wave, r, opts_.frame_opts, feature_window_function_, &window, NULL);
+    ExtractWindow(0, wave, r, opts_.frame_opts, feature_window_function_, &window, NULL);
 
     SubVector<BaseFloat> this_dctf(output->Row(r));
 

@@ -17,6 +17,7 @@
 
 
 #include "feat/feature-gtf.h"
+#include "feat/feature-window.h"
 
 namespace kaldi {
 
@@ -163,7 +164,7 @@ void Gtf::Compute(const VectorBase<BaseFloat> &wave,
   Vector<BaseFloat> mel_energies;
   for (int32 r = 0; r < rows_out; r++) {  // r is frame index..
     BaseFloat log_energy;
-    ExtractWindow(wave, r, opts_.frame_opts, feature_window_function_, &window,
+    ExtractWindow(0, wave, r, opts_.frame_opts, feature_window_function_, &window,
                   (opts_.use_energy && opts_.raw_energy ? &log_energy : NULL));
 
     if (opts_.use_energy && !opts_.raw_energy)
